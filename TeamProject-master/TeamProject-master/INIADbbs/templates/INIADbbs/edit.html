@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>登録</title>
+  <meta charset="UTF-8">
+</head>
+
+{% block body %}
+<a href="{% url 'index' %}">一覧へ</a>
+<form action=""method="post">
+  {{form.errors.message}}
+  <label>{{form.message.label}}{{form.message}}</label><br/>
+  {% csrf_token %}
+  <input type="submit" value="登録">
+</form>
+{% endblock %}
